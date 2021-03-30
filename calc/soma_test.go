@@ -15,6 +15,11 @@ func faoASomaDe(v1, v2 int) error {
 
 func oResultadoDeveSer(soma int) error {
 	fmt.Println(Resultado)
+
+	if Resultado != soma {
+		return fmt.Errorf("Erro ao realizar soma. Experado: %v Obtido: %v", soma, Resultado)
+	}
+
 	return nil
 }
 
